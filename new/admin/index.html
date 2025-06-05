@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/png" href="./img/favicon.ico">
+    <title>酒店数据总览</title>
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+    <!-- 数据统计页面总体结构 -->
+    <div id="wrapper">
+
+        <!-- 侧边栏 -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">管理员<sup>lck</sup></div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>数据统计</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>当日数据</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>房间管理</span></a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+
+        </ul>
+
+        <!-- 主体内容 -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- 顶部导航栏 -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- 顶部导航栏右侧按钮 -->
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">NCEPU</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- 页面内容 -->
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">数据统计</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> 生成报告</a>
+                    </div>
+                    <div class="row">
+                        <!-- 月利润 -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                月利润</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">￥333,222</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 年利润 -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                年利润</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">￥5,201,314</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 年度计划 -->
+                        <div class="col-xl-4 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">年度计划
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 图表 -->
+
+                    <div class="row" id="app">
+
+                        <!-- 收入趋势 -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">收入趋势</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area echarts-box" id="earningsTrend">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 收入来源 -->
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">收入来源</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart-area echarts-box" id="earningsSource">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 底部 -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; lck2025</span>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="./js/echarts.min.js"></script>
+        <script src="./js/vue.js"></script>
+        <script>
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    earningsTrendData: [
+                        ['2024-05-01', 24800],   // 劳动节假期
+                        ['2024-05-15', 11200],   // 平季工作日
+                        ['2024-06-01', 13500],   // 儿童节轻度溢价
+                        ['2024-06-15', 9800],    // 平季周四
+                        ['2024-07-01', 28600],   // 暑期旺季周末
+                        ['2024-07-15', 20300],   // 旺季周六（+25%）
+                        ['2024-08-01', 27400],   // 暑期持续高峰
+                        ['2024-08-15', 18900],   // 旺季工作日
+                        ['2024-09-01', 15800],   // 开学前周末
+                        ['2024-09-15', 12300],   // 平季周二
+                        ['2024-10-01', 46300],   // 国庆节爆发
+                        ['2024-10-15', 14200],   // 节后恢复
+                        ['2024-11-01', 13200],   // 淡季过渡
+                        ['2024-11-15', 8700],    // 常规工作日
+                        ['2024-12-01', 16800],   // 圣诞预热
+                        ['2024-12-15', 15400],   // 周末会议活动
+                        ['2025-01-01', 21400],   // 元旦假期
+                        ['2025-01-15', 6800],    // 春节前淡季低谷
+                        ['2025-02-01', 12300],   // 春节前筹备期
+                        ['2025-02-15', 10600],   // 春节后复工
+                        ['2025-03-01', 8900],    // 淡季工作日
+                        ['2025-03-15', 9200],    // 周末小幅回升
+                        ['2025-04-01', 14300],   // 清明假期
+                        ['2025-04-15', 12800],   // 春游季周末
+                        ['2025-05-01', 23700]    // 五一假期首日
+                    ],
+                    earningsSourceData: [
+                        { value: 133289, name: '客房收入' },      // 占比40%
+                        { value: 66644, name: '餐饮服务' },      // 占比20%
+                        { value: 33322, name: '会议宴会' },      // 占比10%
+                        { value: 46663, name: '康体及配套' },    // 占比14%（水疗+停车场+洗衣）
+                        { value: 29990, name: '商业租赁' },      // 占比9%（商铺+广告+设备）
+                        { value: 16661, name: '旅游票务' },      // 占比5%
+                        { value: 16653, name: '会员服务' }       // 占比5%（含误差调整）
+                    ],
+                },
+                mounted() {
+                    this.earningsSource = echarts.init(document.querySelector('#earningsSource'))
+                    this.earningsSource.setOption(
+                        {
+                            // 提示框
+                            tooltip: {
+                                trigger: 'item'
+                            },
+                            // 图例
+                            legend: {
+                                top: '5%',
+                                left: 'center'
+                            },
+                            // 数据
+                            series: [
+                                {
+                                    name: '消费账单',
+                                    type: 'pie',
+                                    radius: ['40%', '70%'],
+                                    avoidLabelOverlap: false,
+                                    itemStyle: {
+                                        borderRadius: 10,
+                                        borderColor: '#fff',
+                                        borderWidth: 2
+                                    },
+                                    label: {
+                                        show: false,
+                                        position: 'center'
+                                    },
+                                    emphasis: {
+                                        label: {
+                                            show: true,
+                                            fontSize: 40,
+                                            fontWeight: 'bold'
+                                        }
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    data: [
+
+                                    ]
+                                }
+                            ]
+                        }
+                    )
+                    this.getEarningsSource()
+
+                    this.earningsTrend = echarts.init(document.querySelector('#earningsTrend'))
+                    this.earningsTrend.setOption(
+                        {
+                            xAxis: {
+                                type: 'category',
+                                boundaryGap: false
+                            },
+                            yAxis: {
+                                type: 'value',
+                                boundaryGap: [0, '20%']
+                            },
+                            visualMap: {
+                                type: 'piecewise',
+                                show: false,
+                                dimension: 0,
+                                seriesIndex: 0,
+                                pieces: [
+                                    {
+                                        gt: 1,
+                                        lt: 3,
+                                        color: 'rgba(0, 0, 180, 0.4)'
+                                    },
+                                    {
+                                        gt: 5,
+                                        lt: 7,
+                                        color: 'rgba(0, 0, 180, 0.4)'
+                                    }
+                                ]
+                            },
+                            series: [
+                                {
+                                    type: 'line',
+                                    smooth: 0.6,
+                                    symbol: 'none',
+                                    lineStyle: {
+                                        color: '#5470C6',
+                                        width: 5
+                                    },
+                                    markLine: {
+                                        symbol: ['none', 'none'],
+                                        label: { show: false },
+                                        data: [{ xAxis: 1 }, { xAxis: 3 }, { xAxis: 5 }, { xAxis: 7 }]
+                                    },
+                                    areaStyle: {},
+                                    data: [
+                                    ]
+                                }
+                            ]
+                        }
+                    )
+                    this.getEarningsTrend()
+                },
+                methods: {
+                    getEarningsSource() {
+                        // console.log(res.data.data)
+                        // 更新图表
+                        this.earningsSource.setOption({
+                            series: [
+                                {
+                                    name: '收入来源',
+                                    type: 'pie',
+                                    radius: ['30%', '70%'],
+                                    avoidLabelOverlap: false,
+                                    itemStyle: {
+                                        borderRadius: 10,
+                                        borderColor: '#fff',
+                                        borderWidth: 3
+                                    },
+                                    label: {
+                                        show: false,
+                                        position: 'center'
+                                    },
+                                    emphasis: {
+                                        label: {
+                                            show: true,
+                                            fontSize: 25,
+                                            fontWeight: 'bold'
+                                        }
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    },
+                                    data: this.earningsSourceData
+                                }
+                            ]
+                        })
+                    },
+                    getEarningsTrend() {
+                        this.earningsTrend.setOption({
+                            visualMap: {
+                                type: 'piecewise',
+                                show: false,
+                                dimension: 0,
+                                seriesIndex: 0,
+                                pieces: [
+                                    {
+                                        gt: 3,
+                                        lt: 5,
+                                        color: 'rgba(0, 0, 180, 0.4)'
+                                    },
+                                    {
+                                        gt: 9,
+                                        lt: 11,
+                                        color: 'rgba(0, 0, 180, 0.4)'
+                                    },
+                                    {
+                                        gt: 15,
+                                        lt: 17,
+                                        color: 'rgba(0, 0, 180, 0.4)'
+                                    }
+                                ]
+                            },
+                            series: [
+                                {
+                                    type: 'line',
+                                    smooth: 0.6,
+                                    symbol: 'none',
+                                    lineStyle: {
+                                        color: '#5470C6',
+                                        width: 4
+                                    },
+                                    markLine: {
+                                        symbol: ['none', 'none'],
+                                        label: { show: false },
+                                        data: [{ xAxis: 3 }, { xAxis: 5 }, { xAxis: 9 }, { xAxis: 11 }, { xAxis: 15 }, { xAxis: 17 }]
+                                    },
+                                    areaStyle: {},
+                                    data: this.earningsTrendData
+                                }
+                            ]
+
+                        })
+                    }
+                }
+            })
+        </script>
+</body>
+
+</html>

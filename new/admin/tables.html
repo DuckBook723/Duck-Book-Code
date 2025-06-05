@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>房间管理</title>
+    <link rel="icon" type="image/png" href="./img/favicon.ico">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="css/sb-admin-2.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">管理员<sup>lck</sup></div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>数据统计</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>当日数据</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>房间管理</span></a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- 顶部导航栏 -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- 顶部导航栏右侧按钮 -->
+                    <ul class="navbar-nav ml-auto">
+                        <div class="topbar-divider d-none d-sm-block"></div>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">NCEPU</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+                <!-- 页面内容 -->
+                <div class="container-fluid" id="app">
+                    <h1 class="h3 mb-2 text-gray-800">房间管理</h1>
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">房间状态表</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>房间号</th>
+                                            <th>状态</th>
+                                            <th>入住时间</th>
+                                            <th>离开时间</th>
+                                            <th>操作</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>房间号</th>
+                                            <th>状态</th>
+                                            <th>入住时间</th>
+                                            <th>离开时间</th>
+                                            <th>操作</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr v-for="room in roomData">
+                                            <td>{{ room.roomNumber }}</td>
+                                            <td>{{ room.status }}</td>
+                                            <td>{{ room.checkInTime }}</td>
+                                            <td>{{ room.checkOutTime }}</td>
+                                            <td>
+                                                <button class="btn btn-primary" data-toggle="modal"
+                                                    data-target="#exampleModal">入住</button>
+                                                <button class="btn btn-danger" data-toggle="modal"
+                                                    data-target="#exampleModal">退房</button>
+                                                <button class="btn btn-success" data-toggle="modal"
+                                                    data-target="#exampleModal">查看</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; lck2025</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="./js/vue.js"></script>
+
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                roomData: [
+                    { roomNumber: "101", status: "已入住", checkInTime: "2025-05-01 14:00", checkOutTime: "2025-05-05 12:00" },
+                    { roomNumber: "102", status: "已预定", checkInTime: "2025-05-10 15:00", checkOutTime: "2025-05-15 11:00" },
+                    { roomNumber: "103", status: "待清扫", checkInTime: "2025-04-28 10:00", checkOutTime: "2025-05-01 09:00" },
+                    { roomNumber: "104", status: "待预定", checkInTime: "", checkOutTime: "" },
+                    { roomNumber: "105", status: "已入住", checkInTime: "2025-04-30 16:00", checkOutTime: "2025-05-03 10:00" },
+                    { roomNumber: "201", status: "已预定", checkInTime: "2025-06-02 12:00", checkOutTime: "2025-06-07 10:00" },
+                    { roomNumber: "202", status: "待清扫", checkInTime: "2025-05-01 08:00", checkOutTime: "2025-05-01 13:00" },
+                    { roomNumber: "203", status: "待预定", checkInTime: "", checkOutTime: "" },
+                    { roomNumber: "301", status: "已入住", checkInTime: "2025-04-29 17:30", checkOutTime: "2025-05-04 14:00" },
+                    { roomNumber: "302", status: "已预定", checkInTime: "2025-05-20 09:00", checkOutTime: "2025-05-25 18:00" },
+                    { roomNumber: "303", status: "待清扫", checkInTime: "2025-04-27 15:00", checkOutTime: "2025-04-30 11:00" },
+                    { roomNumber: "401", status: "待预定", checkInTime: "", checkOutTime: "" },
+                    { roomNumber: "402", status: "已入住", checkInTime: "2025-04-28 12:00", checkOutTime: "2025-05-02 12:00" },
+                    { roomNumber: "403", status: "已预定", checkInTime: "2025-05-12 14:00", checkOutTime: "2025-05-17 12:00" },
+                    { roomNumber: "501", status: "待清扫", checkInTime: "2025-04-30 10:00", checkOutTime: "2025-05-01 10:00" },
+                    { roomNumber: "502", status: "待预定", checkInTime: "", checkOutTime: "" },
+                    { roomNumber: "601", status: "已入住", checkInTime: "2025-05-01 10:30", checkOutTime: "2025-05-06 12:00" },
+                    { roomNumber: "602", status: "已预定", checkInTime: "2025-05-18 16:00", checkOutTime: "2025-05-23 10:00" },
+                    { roomNumber: "603", status: "待清扫", checkInTime: "2025-04-29 09:00", checkOutTime: "2025-05-01 08:00" },
+                    { roomNumber: "701", status: "待预定", checkInTime: "", checkOutTime: "" }
+                ]
+            }
+        })
+    </script>
+</body>
+
+</html>

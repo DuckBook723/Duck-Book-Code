@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <title>xxx酒店</title>
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <link rel="icon" type="image/png" href="../../assets/icons/favicon.ico">
+   <!-- bootstrap css 样式 -->
+   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+   <!-- 此网页的样式-->
+   <link rel="stylesheet" type="text/css" href="css/style.css">
+   <!-- responsive -->
+   <link rel="stylesheet" href="css/responsive.css">
+   <!--  字体 css -->
+   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap" rel="stylesheet">
+   <!-- 滚动条 -->
+   <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+   <!-- 针对旧版本 IE 的样式 -->
+   <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+</head>
+
+<body>
+   <div id="app">
+      <!-- 头部区域 -->
+      <div class="header_section">
+         <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+               <a class="navbar-brand" href="#"><img src="../../assets/images/logo.png"
+                     style="width: 50px; height: 50px;background-color: #fff;border-radius: 50%;margin-right: 10px;margin-top: 10px;"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#">首页</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">关于我们</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">服务</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">房间</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">联系我们</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-lg-0">
+                     <div class="login_bt">
+                        <a href="#" @click="loginButton">
+                           <span style="color:rgb(246, 244, 248)">
+                              <i class="fa fa-user" aria-hidden="true"></i>
+                           </span>
+                           登录
+                        </a>
+                     </div>
+                     <span class="fa fa-search form-control-feedback"></span>
+                  </form>
+               </div>
+            </nav>
+         </div>
+         <!-- banner section start -->
+         <div class="banner_section layout_padding">
+            <div class="container">
+               <div id="main_slider" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="row">
+                           <div class="col-lg-20 col-sm-10">
+                              <h1 class="banner_taital"> 欢迎来到<strong><i>XXXX酒店</i></strong><br><span
+                                    style="font-size: 30px;">房间预定</span></h1>
+                           </div>
+                        </div>
+                        <div class="banner_section_2">
+                           <div class="row">
+                              <div class="col-lg-4 col-sm-6">
+                                 <h6 class="name_text"> 入住时间</h6>
+                                 <form>
+                                    <div class="form-group">
+                                       <select class="form-control" id="">
+                                          <option>选择入住时间</option>
+                                          <option>5月15日</option>
+                                          <option>5月16日</option>
+                                          <option>5月17日</option>
+                                          <option>5月18日</option>
+                                       </select>
+                                    </div>
+                                 </form>
+                              </div>
+                              <div class="col-lg-4 col-sm-6">
+                                 <h6 class="name_text"> 房间类型</h6>
+                                 <form>
+                                    <div class="form-group">
+                                       <select class="form-control" id="">
+                                          <option>选择房间类型</option>
+                                          <option>标准间</option>
+                                          <option>豪华间</option>
+                                          <option>特惠房</option>
+                                          <option>单人房</option>
+                                       </select>
+                                    </div>
+                                 </form>
+                              </div>
+                              <div class="col-lg-4 col-sm-6">
+                                 <h6 class="name_text"> 楼层</h6>
+                                 <form>
+                                    <div class="form-group">
+                                       <select class="form-control" id="">
+                                          <option>选择楼层</option>
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                       </select>
+                                    </div>
+                                 </form>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="started_text"><a href="#">即刻预定</a></div>
+                     </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+                     <i class="fa fa-angle-left"></i>
+                  </a>
+                  <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+                     <i class="fa fa-angle-right"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!-- 服务介绍 -->
+      <div class="services_section layout_padding">
+         <div class="container-fluid">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="services_taital">优质服务</h1>
+               </div>
+            </div>
+            <div class="services_section_2">
+               <div class="row">
+                  <div class="col-lg-3 col-sm-6" v-for="item in services_desc" :key="item.id">
+                     <div class="box_main">
+                        <div class="service_img"><img :src="item.imgURL"></div>
+                        <h4 class="development_text">{{ item.title}}</h4>
+                        <p class="services_text">
+                           {{ item.desc }}</p>
+                        <div class="readmore_bt active"><a href="#">查看详情</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 关于我们 -->
+      <div class="about_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6">
+                  <h1 class="about_taital">关于我们</h1>
+                  <p class="about_text">
+                     <!-- 这里的第一个字大写且左移 -->
+                     <span
+                        style="font-size: 25px;font-weight: bold;margin-left: 0px;margin-right: 5px;margin-bottom: 30px;margin-top: 20px;">XXX酒店</span>坐落城市核心腹地，毗邻地铁枢纽与地标商圈，步行即达热门景点，周边餐饮娱乐配套完善，
+                     距机场30分钟高效直达。酒店以现代美学设计为基调，配备智能客控系统、高速网络及多功能会议空间，
+                     满足商旅与休闲双重需求。客房提供定制化寝具、助眠香薰及空气净化系统，结合24小时管家服务与快速洗衣通道，
+                     打造沉浸式舒适体验。依托数据可视化平台，动态优化服务流程，并推出智能行李托管、个性化行程规划等差异化服务，以科技赋能细节，重塑城市旅居新标杆。
+                  </p>
+                  <div class="read_bt_1"><a href="#">查看详情</a></div>
+               </div>
+               <div class="col-md-6">
+                  <div class="about_img"><img src="../../assets/images/about-img.png"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 房间介绍 -->
+      <div class="rooms_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h1 class="rooms_taital">精选房间</h1>
+                  <p class="rooms_text">
+                     精选行政套房、景观房多元房型，配备智能客控、定制寝具、助眠香薰及空气净化系统，品质细节成就商旅休憩理想之选。
+                  </p>
+               </div>
+               <div class="rooms_section_2">
+                  <div class="row">
+                     <div class="col-md-4" v-for="item in roomInfo" :key="item.id">
+                        <div class="hover01 column">
+                           <figure><img :src="item.imgURL"></figure>
+                        </div>
+                        <h3 class="introduction_text">{{ item.name }}</h3>
+                        <h6 class="rate_text">{{ item.price }}</h6>
+                        <p class="lorem_text">{{ item.desc }}</p>
+                        <div class="read_bt active"><a href="#">查看详情</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- 意见反馈 -->
+      <div class="customer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="customer_taital">客户评价</h1>
+                  <p class="customer_text">客户评价聚焦服务高效贴心、设施智能便捷、环境雅致舒适，满意度高，口碑力荐之选。</p>
+               </div>
+            </div>
+         </div>
+         <div id="my_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="customer_section_2">
+                     <div class="container">
+                        <div class="row">
+                           <div class="col-md-6">
+                              <div class="customer_box">
+                                 <div class="customer_main">
+                                    <div class="customer_left">
+                                       <h3 class="customer_name">燕姐</h3>
+                                       <p class="enim_text">VIP</p>
+                                    </div>
+                                    <div class="customer_right">
+                                       <div class="quick_icon"><img src="../../assets/images/quick-icon.png"></div>
+                                    </div>
+                                 </div>
+                                 <p class="ipsum_text">
+                                    【入住贴心建议】若首次入住，建议提前联系前台说明需求（如枕头类型、香薰偏好），可快速匹配个性化服务；
+                                    商务出行优先选择高层景观房，避开街道噪音，同时利用智能客控预设光线模式提升办公效率；洗衣服务建议早晨提交，
+                                    4小时内返还；周边景点建议错峰步行游览，晚餐可尝试酒店合作餐厅享专属折扣；离店前体验行李智能寄存，轻松规划返程前的碎片时间。酒店服务数据系统实时收集反馈，任何建议可直联管家，共同优化体验。
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="col-md-6">
+                              <div class="customer_box">
+                                 <div class="customer_main">
+                                    <div class="customer_left">
+                                       <h3 class="customer_name">茗宁咖啡</h3>
+                                       <p class="enim_text">SVIP</p>
+                                    </div>
+                                    <div class="customer_right">
+                                       <div class="quick_icon"><img src="../../assets/images/quick-icon.png"></div>
+                                    </div>
+                                 </div>
+                                 <p class="ipsum_text">
+                                    【深度体验指南】若携带儿童入住，可提前预约儿童寝具及玩具套装；健身爱好者推荐使用客房内投影教程或预约私教时段；
+                                    会议客人建议入住时确认设备调试需求，避免延误。夜间可使用App一键下单宵夜或定制SPA。关注酒店会员计划，
+                                    积分可兑换周边景点门票。离店后参与服务反馈问卷，助力优化下次入住体验。
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+               <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+            </a>
+         </div>
+      </div>
+      <!--   订阅我们 -->
+      <div class="newslatter_section">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <h3 class="subscribe_taital">订阅我们</h3>
+                  <p class="subscribe_text">订阅我们的最新资讯，获取最新的酒店信息</p>
+               </div>
+            </div>
+            <div class="input_main">
+               <input type="text" class="email_text_1" placeholder="输入您的邮箱" name="Enter Your Email">
+               <div class="subscribe_bt"><a href="#">订阅</a></div>
+            </div>
+         </div>
+      </div>
+      <!--  底部 -->
+      <div class="footer_section layout_padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-lg-3 col-sm-6">
+                  <h3 class="useful_text">有效链接</h3>
+                  <div class="footer_menu">
+                     <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">服务</a></li>
+                        <li><a href="#">房间</a></li>
+                        <li><a href="#">价格</a></li>
+                        <li><a href="#">客户评价</a></li>
+                        <li><a href="#">联系我们</a></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h3 class="useful_text">信息</h3>
+                  <p class="footer_text">
+                     坐落于城市核心地段的XX酒店，集商务与休闲于一体，以现代艺术设计融合地域文化特色，打造沉浸式旅居体验。
+                     秉承绿色理念，酒店采用光伏发电与雨水回收系统，连续三年获评“可持续旅游先锋奖”。
+                  </p>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="useful_text">有效链接</h1>
+                  <div class="footer_social_icon">
+                     <ul>
+                        <li>
+                           <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                        </li>
+                        <li>
+                           <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="col-lg-3 col-sm-6">
+                  <h1 class="useful_text">联系我们</h1>
+                  <div class="location_text">
+                     <ul>
+                        <li>
+                           <a href="#">
+                              <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">地址：
+                                 华北电力大学（保定校区）信管专业</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <i class="fa fa-phone" aria-hidden="true"></i><span
+                                 class="padding_left_10">服务热线：123-456-7890</span>
+                           </a>
+                        </li>
+                        <li>
+                           <a href="#">
+                              <i class="fa fa-envelope" aria-hidden="true"></i><span
+                                 class="padding_left_10">邮箱：info@example.com</span>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--  版权 -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">All Rights Reserved. <a target="_blank" href="#" title="">LCK</a></p>
+         </div>
+      </div>
+   </div>
+   <!--  引入 Vue.js -->
+   <script src="../vue.js"></script>
+   <!-- 创建 Vue 实例 -->
+   <script>
+      const app = new Vue({
+         el: ' #app',
+         data: {
+            username: localStorage.getItem('username') || '登录',
+            services_desc: [{
+               id: 1,
+               title: '获取周边信息', desc: '地铁商区环绕，景点近在咫尺，餐饮购物丰富，机场30分钟直达，商旅皆宜。',
+               imgURL: '../../assets/images/icon-1.png'
+            }, {
+               id: 2, title: '服务数据可视化',
+               desc: '酒店服务数据动态交互图表，多维呈现客需趋势，助力精准优化运营效能。', imgURL: '../../assets/images/icon-2.png'
+            }, {
+               id: 3, title: '提高居住舒适度', desc: '尊享定制睡枕、助眠香薰、快速洗衣及智能客控，全面提升入住舒适体验。',
+               imgURL: '../../assets/images/icon-3.png'
+            }, {
+               id: 4, title: '管理个人物品',
+               desc: '个人物品分类收纳，专属标签标记，寄存保管及智能提醒，安全便捷无忧。', imgURL: '../../assets/images/icon-4.png'
+            },],
+            roomInfo: [
+               { id: 1, name: '行政套房', price: '$550', desc: '每晚', imgURL: '../../assets/images/img-1.jpg' },
+               { id: 2, name: '单身狗套房', price: '$250', desc: '每晚', imgURL: '../../assets/images/img-2.png' },
+               { id: 3, name: '标准间套房', price: '$350', desc: '每晚', imgURL: '../../assets/images/img-3.jpg' },
+            ]
+         }, methods: {
+            loginButton() {
+               // 跳转至登录页面 
+               window.location.href = '../login/index.html';
+            }
+         }
+      });
+   </script>
+</body>
+
+</html>
